@@ -1,9 +1,8 @@
 # Welcome 
 Logo Car Brand Recognition
 ## Download
-Data set contains 27 logo brands in Vietnam including;  audi, BMW, Chevrolet, daewoo, ferrari, ford, honda, hyundai, Isuzu, kia da, Lada, Lamborghini, land rover, lexus, Mazda, mercedes, mitsubishi, Nissan, opel, Peugeot, Porsche, Rolls Royce, Ssangyong, Subaru, Suzuki, toyota, Vinfast. 
+Data set contains 27 logo brands in Vietnam including;  audi, BMW, Chevrolet, daewoo, ferrari, ford, honda, hyundai, Isuzu, kia da, Lada, Lamborghini, land rover, lexus, Mazda, mercedes, mitsubishi, Nissan, opel, Peugeot, Porsche, Rolls Royce, Ssangyong, Subaru, Suzuki, toyota, Vinfast. \
 Dataset has 928 photos and label.
-Download dataset in [Car Brand Logo](https://drive.google.com/file/d/1n5fOpIQVDWdgHY-Ah4HF7_pIO9vTkPx5/view?usp=sharing)
 ##  Install Yolov5
 
 ```
@@ -26,5 +25,13 @@ names: ['audi', 'BMW', 'Chevrolet', 'daewoo', 'ferrari', 'ford', 'honda', 'hyund
 ```
 python train.py --img 640 --batch 16 --epochs 300 --data custom_data.yaml --weights yolov5s.pt 
 ```
-## Weight
-Download in [drive](https://drive.google.com/file/d/1drBzacHbZdISpJVoDgP34o06zsVqn70D/view?usp=sharing)
+
+## Demo
+- Detect 
+```
+python detect.py --weights best.pt --img 960 --conf 0.25 --source data/images/bmw-840i-2-3592.jpg
+```
+- Demo Gradio
+```commandline
+python demo_gradio.py
+```
